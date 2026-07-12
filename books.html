@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedro Alves | Livros</title>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesbook.css">
+</head>
+
+
+<body>
+    <!--  Section Header -->
+    <header class="main-header">
+        <div class="nav-container">
+            <a href="/" class="author-name">PEDRO ALVES</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html#home">INÍCIO</a></li>
+                    <li><a href="books.html">LIVROS</a></li>
+                    <li><a href="sobre.html">SOBRE</a></li>
+                    <li><a href="contato.html">CONTATO</a></li>
+                </ul>
+            </nav>
+            <!-- Nova seção de redes sociais HUD -->
+           <div class="social-hud">
+               <a href="https://www.instagram.com/p.alves1998" class="social-link" title="Instagram">IG</a>
+               <a href="https://www.amazon.com.br/stores/Pedro-Alves/author/B08WKQ65VJ" class="social-link" title="Amazon">Amazon</a>
+               <a href="https://www.facebook.com/literagenesis" class="social-link" title="Facebook">Facebook</a>
+           </div>
+        </div>
+
+            <button class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+    </header>
+
+<main>
+        <section class="page-title-section">
+            <div class="title-container">
+                <h1>Sagas e Obras</h1>
+                <p>Navegue pelos universos literários. Da ficção científica distópica aos romances apaixonantes.</p>
+                <span class="decorative-line scifi-line"></span> 
+            </div>
+        </section>
+
+        <!-- SEÇÃO SCI-FI -->
+        <section class="saga-section theme-scifi" id="scifi-section">
+            <div class="section-header">
+                <h2>UNIVERSO SCI-FI & FANTASIA</h2>
+                               
+            </div>
+            
+            <div class="saga-grid" id="scifi-grid">
+                <!-- Preenchido via JS com as Capas em Imagem -->
+            </div>
+        </section>
+
+        <!-- SEÇÃO ROMANCE -->
+        <section class="saga-section theme-romance" id="romance-section">
+            <div class="section-header">
+                <h2>UNIVERSO DOS ROMANCES</h2>
+                <span class="decorative-line romance-line"></span>
+                <p>Obras com tons de vermelho e néon que exploram o amor intenso, intrigas e destinos cruzados.</p>
+            </div>
+            
+            <div class="saga-grid" id="romance-grid">
+                <!-- Preenchido via JS com as Capas em Imagem -->
+            </div>
+        </section>
+
+                <!-- MODAL DE ESPECIFICAÇÃO DE OBRAS E UNIVERSOS -->
+                <div id="saga-modal" class="modal-wrapper hidden">
+                    <div id="modal-card-theme" class="modal-card">
+                        <button class="close-btn top-close" aria-label="Fechar Modal">&times;</button>
+                        
+                        <div class="modal-layout-grid">
+                            <!-- Painel Lateral: Ficha Técnica -->
+                            <aside class="modal-sidebar">
+                                <figure class="sidebar-cover-container">
+                                    <img id="modal-cover-img" src="" alt="Capa Principal" class="modal-cover-img">
+                                </figure>
+                                
+                                <section class="sidebar-fiche-info">
+                                    <h4 class="fiche-title">Registro do Arquivo</h4>
+                                    <ul class="fiche-list">
+                                        <li><span class="fiche-label">Autoridade:</span> Pedro Alves</li>
+                                        <li><span class="fiche-label">Classificação:</span> <span id="modal-tech-genre">Gênero</span></li>
+                                        <li><span class="fiche-label">Status de Acesso:</span> Liberado</li>
+                                    </ul>
+                                </section>
+                            </aside>
+
+                            <!-- Painel Principal: Dossiê Analítico -->
+                            <div class="modal-main-content">
+                                <header class="modal-content-header">
+                                    <h2 id="modal-title">Título do Universo</h2>                                   
+                                </header>
+
+                                <section class="fiche-section">
+                                    <h3 class="section-heading">Fundamentação Narrativa</h3>
+                                    <p id="modal-desc" class="modal-body"></p>
+                                </section>
+
+                                <section class="fiche-section hidden" id="modal-characters-section">
+                                    <h3 class="section-heading">Personagens</h3>
+                                    <div class="character-grid" id="modal-characters-list"></div>
+                                </section>
+
+                                <section class="fiche-section">
+                                    <h3 class="section-heading">Volumes Catalogados</h3>
+                                    <div id="modal-book-list" class="book-detailed-list">
+                                        <!-- Injetados via JS -->
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+
+                        <footer class="modal-footer">
+                            <button class="btn-close-bottom" id="close-modal-bottom">Encerrar Visualização</button>
+                        </footer>
+                    </div>
+                </div>
+    </main>
+
+
+
+    <!-- Section Footer (Idêntico ao restante do site) -->
+    <footer class="site-footer">
+        <div class="footer-content">
+           <p class="copyright-text">
+                &copy; Todo o conteúdo é propriedade de Pedro A. Pereira, 2026. Todos os direitos reservados. Site desenvolvido por <a href="https://audreymoura.github.io/portfolio/" class="footer-highlight" target="_blank" rel="noopener noreferrer">Audrey R. Moura</a>.
+            </p>
+            <nav class="footer-nav">
+                <a href="index.html">Início</a>
+                <span class="separator">|</span>
+                <a href="index.html#books">Livros</a>
+                <span class="separator">|</span>
+                <a href="#">Blog</a>
+                <span class="separator">|</span>
+                <a href="sobre.html">Sobre Pedro</a>
+                <span class="separator">|</span>
+                <a href="contato.html">Contato</a>
+            </nav>
+        </div>
+
+
+
+        <button id="backToTopBtn" class="back-to-top" title="Voltar ao topo">
+            &#8963;
+        </button>
+    </footer>
+
+    <!-- Movido para o fim do body (estava no <head> e rodava antes do
+         #backToTopBtn e do resto do DOM existirem, então quebrava). -->
+    <script src="scriptbook.js" defer></script>
+</body>
+</html>
