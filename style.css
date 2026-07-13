@@ -1415,7 +1415,7 @@ body {
 }
 
 /* =========================================
-   PÁGINA: CONTATO (SCI-FI / TERMINAL)
+   PÁGINA: CONTATO 
    ========================================= */
 
 .contact-hero {
@@ -1447,6 +1447,61 @@ body {
     gap: 50px;
     max-width: 1200px;
     width: 100%;
+}
+
+.contact-links{
+    width:100%;
+    max-width:520px;
+}
+
+.links-panel{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+    padding:30px;
+    border:1px solid rgba(0,255,255,.15);
+    background:rgba(10,15,25,.75);
+    backdrop-filter:blur(10px);
+}
+
+.social-card{
+    display:block;
+    padding:20px;
+    border:1px solid rgba(0,255,255,.15);
+    text-decoration:none;
+    transition:.3s;
+    background:rgba(255,255,255,.02);
+}
+
+.social-card:hover{
+    border-color:#00ffff;
+    transform:translateX(8px);
+    box-shadow:0 0 20px rgba(0,255,255,.15);
+}
+
+.social-title{
+    display:block;
+    color:#00ffff;
+    font-weight:700;
+    letter-spacing:2px;
+    margin-bottom:8px;
+    font-size:.95rem;
+}
+
+.social-desc{
+    display:block;
+    color:#c9d2da;
+    line-height:1.6;
+    font-size:.9rem;
+}
+
+.channel-data{
+    color:#00ffff;
+    text-decoration:none;
+}
+
+.channel-data:hover{
+    text-decoration:underline;
 }
 
 /* --- COLUNA ESQUERDA: INFORMAÇÕES --- */
@@ -1495,24 +1550,6 @@ body {
     text-shadow: 0 0 5px rgba(0, 229, 255, 0.3);
 }
 
-/* --- COLUNA DIREITA: FORMULÁRIO TERMINAL --- */
-.contact-form-wrapper {
-    flex: 1;
-    background: rgba(0, 15, 30, 0.8);
-    border: 1px solid rgba(0, 229, 255, 0.2);
-    box-shadow: 0 0 30px rgba(0, 229, 255, 0.05), inset 0 0 20px rgba(0, 229, 255, 0.05);
-    padding: 40px;
-    position: relative;
-}
-
-/* Enfeites dos cantos do formulário */
-.contact-form-wrapper::before,
-.contact-form-wrapper::after {
-    content: ''; position: absolute; width: 20px; height: 20px; border: 2px solid #00e5ff; pointer-events: none; opacity: 0.5;
-}
-.contact-form-wrapper::before { top: -1px; left: -1px; border-right: none; border-bottom: none; }
-.contact-form-wrapper::after { bottom: -1px; right: -1px; border-left: none; border-top: none; }
-
 .form-hud-header {
     display: flex;
     justify-content: space-between;
@@ -1541,88 +1578,8 @@ body {
     50% { opacity: 0.2; }
 }
 
-.tech-form {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
 
-.input-group {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
 
-.input-group label {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.85rem;
-    color: #b3d9ff;
-    letter-spacing: 1px;
-}
-
-.tech-form input,
-.tech-form select,
-.tech-form textarea {
-    background: rgba(0, 34, 68, 0.4);
-    border: 1px solid rgba(0, 229, 255, 0.3);
-    padding: 15px;
-    font-family: 'Courier New', Courier, monospace;
-    color: #fff;
-    font-size: 1rem;
-    outline: none;
-    transition: all 0.3s ease;
-}
-
-.tech-form input::placeholder,
-.tech-form textarea::placeholder {
-    color: rgba(0, 229, 255, 0.4);
-}
-
-/* Foco nos inputs: brilha em neon */
-.tech-form input:focus,
-.tech-form select:focus,
-.tech-form textarea:focus {
-    border-color: #00e5ff;
-    background: rgba(0, 229, 255, 0.05);
-    box-shadow: 0 0 10px rgba(0, 229, 255, 0.2), inset 0 0 5px rgba(0, 229, 255, 0.1);
-}
-
-/* Customização da setinha do Select */
-.tech-form select {
-    appearance: none;
-    cursor: pointer;
-    background-image: url('data:image/svg+xml;utf8,<svg fill="%2300e5ff" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
-    background-repeat: no-repeat;
-    background-position-x: 98%;
-    background-position-y: 50%;
-}
-
-.tech-form select option {
-    background-color: #001a33;
-    color: #00e5ff;
-}
-
-/* Botão de Envio */
-.btn-transmit {
-    background: rgba(0, 229, 255, 0.1);
-    color: #00e5ff;
-    border: 1px solid #00e5ff;
-    padding: 18px;
-    font-family: 'Space Mono', monospace;
-    font-size: 1rem;
-    font-weight: bold;
-    letter-spacing: 2px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    margin-top: 10px;
-}
-
-.btn-transmit:hover {
-    background: #00e5ff;
-    color: #001a33;
-    box-shadow: 0 0 20px rgba(0, 229, 255, 0.6);
-}
 
 
 /* =========================================

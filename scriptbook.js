@@ -2,12 +2,14 @@
    1. MENU
    ========================================= */
    
-const btn=document.getElementById("menu-toggle");
-const nav=document.querySelector(".main-nav");
+const btn = document.getElementById("menu-toggle");
+const nav = document.querySelector(".main-nav");
 
-btn.addEventListener("click",()=>{
-    nav.classList.toggle("active");
-});
+if (btn && nav) {
+    btn.addEventListener("click", () => {
+        nav.classList.toggle("active");
+    });
+}
 
 
 /* =========================================
@@ -21,19 +23,68 @@ const sagasDb = {
         image: "src/capa1.png",
         description: "A série Inverno Tecnológico introduz o conceito de multiplas realidades através da exploração da viagem no tempo. Dalbert Kirian, protagonista do primeiro e segundo livos é quem inicia essa aventura épica ao retornar 100 anos no passado após o seu futuro ter sido destruido por Valkyrius; uma androide criada por ele mesmo com inteligência artificial que foi afetada por um virus e que, ao invés de servir a medicina para 'curar os humanos', ela acaba se convencendo de que precisa 'curar a humanidade' forçando a sua evolução até o apice.", 
         characters: [
-            { name: "Dalbert Kirian", role: "Dalbert acreditava que o futuro estava em sua criação mais notável; Valkyrius, a esperança da humanidade em busca da cura das doenças e até o caminho para a imortalidade.", image: "src/personagem1.jpg" },
-            { name: "Projeto Valkyrius", role: "O primeiro Bióide Sensciente nasceu de um ferro velho. Criada como vacina para doenças humanas, ela foi infectada por um biovirus que a corrompeu e a transformou em uma governante tirânica sobre a próxima evolução do homem.", image: "src/personagem2.jpg" },
-            { name: "Kayle Beltran", role: " Kayle é (ou foi) uma das mentes mais brilhantes da Vision Corp., responsável pela criação da viagem no tempo.", image: "src/personagem3.jpg" },
-            { name: "Andrew Kirian", role: "A mente privilegiada de um garoto da baixa classe média transformou um futuro onde seu neto, Dalbert Kirian, acabou criando um monstro a partir do seu sonho de criar a máquina capaz de curar as doenças dos seres humanos.", image: "src/personagem4.jpg" }
+            { 
+                name: "Dalbert Kirian", 
+                role: "Dalbert acreditava que o futuro estava em sua criação mais notável; Valkyrius, a esperança da humanidade em busca da cura das doenças e até o caminho para a imortalidade.", 
+                image: "src/personagem1.jpg" 
+            },
+            { 
+                name: "Projeto Valkyrius", 
+                role: "O primeiro Bióide Sensciente nasceu de um ferro velho. Criada como vacina para doenças humanas, ela foi infectada por um biovirus que a corrompeu e a transformou em uma governante tirânica sobre a próxima evolução do homem.", 
+                image: "src/personagem2.jpg" 
+            },
+            { 
+                name: "Kayle Beltran", 
+                role: " Kayle é (ou foi) uma das mentes mais brilhantes da Vision Corp., responsável pela criação da viagem no tempo.", 
+                image: "src/personagem3.jpg" 
+            },
+            { 
+                name: "Andrew Kirian", 
+                role: "A mente privilegiada de um garoto da baixa classe média transformou um futuro onde seu neto, Dalbert Kirian, acabou criando um monstro a partir do seu sonho de criar a máquina capaz de curar as doenças dos seres humanos.", 
+                image: "src/personagem4.jpg" 
+            }
         ],
 
         books: [
-            { title: "Projeto Valkyrius: Parte I", cover: "src/capa1.png", summary: "Após falhar no Projeto Valkyrius, o último homem, Dalbert, deve mudar o destino sombrio.", pages: 483, year: 2020, link: "https://www.amazon.com.br/gp/product/B088P79Q9H" },
-            { title: "Care White e o Orbe da Criação: Parte II", cover: "src/capa2.png", summary: "Ecos do passado começam a reescrever o presente.", pages: 412, year: 2021, link: "https://www.amazon.com.br/gp/product/B08MFVMCCW" },
-            { title: "Os Agentes da Sudden: Parte III", cover: "src/capa3.png", summary: "Ecos do passado começam a reescrever o presente.", pages: 412, year: 2021, link: "https://www.amazon.com.br/gp/product/B09DXGJ5FR" },
-            { title: "Orphagem - A maquina vazia: Parte IV", cover: "src/capa4.png", summary: "Ecos do passado começam a reescrever o presente.", pages: 412, year: 2021, link: "#" },
-            { title: "O Magistério Cósmico e as Relíquias do Tempo: Parte V", cover: "src/capa5.png", summary: "Ecos do passado começam a reescrever o presente.", pages: 412, year: 2025, link: "https://www.amazon.com.br/gp/product/B08FMT3LVN" },
-            { title: "Inverno Tecnologico: Duologia Digital", cover: "src/capa6.png", summary: "Ecos do passado começam a reescrever o presente.", pages: 412, year: 2021, link: "https://www.amazon.com.br/gp/product/B09NWGS7TH" }
+            { 
+                title: "Projeto Valkyrius: Parte I", cover: "src/capa1.png", 
+                summary: "Após falhar no Projeto Valkyrius, o último homem, Dalbert, deve mudar o destino sombrio.", 
+                pages: 483, year: 2020, 
+                link: "https://www.amazon.com.br/gp/product/B088P79Q9H" 
+            },
+            { 
+                title: "Care White e o Orbe da Criação: Parte II", 
+                cover: "src/capa2.png", 
+                summary: "Care White investiga o sumiço do pai e a origem extraterrestre, mas enfrenta a seita Cavaliers, que também cobiça o Orbe da Criação.", 
+                pages: 412, year: 2021, 
+                link: "https://www.amazon.com.br/gp/product/B08MFVMCCW" 
+            },
+            { 
+                title: "Os Agentes da Sudden: Parte III", 
+                cover: "src/capa3.png", 
+                summary: "Condenado à morte, Cesar Augusto assume a Sudden para vingar o pai, morto pelo desertor Erick Braga, e recuperar uma arma secreta.", 
+                pages: 412, year: 2021, 
+                link: "https://www.amazon.com.br/gp/product/B09DXGJ5FR" 
+            },
+            { 
+                title: "Orphagem - A maquina vazia: Parte IV", 
+                cover: "src/capa4.png", 
+                summary: "Ecos do passado começam a reescrever o presente.", 
+                pages: 412, year: 2021, 
+                link: "#" 
+            },
+            { title: "O Magistério Cósmico e as Relíquias do Tempo: Parte V", 
+                cover: "src/capa5.png", 
+                summary: "Dalbert altera o passado do avô para evitar o Inverno Tecnológico, desperta um mal e é caçado pelo Magistério para salvar o universo.", 
+                pages: 412, year: 2025, 
+                link: "https://www.amazon.com.br/gp/product/B08FMT3LVN" 
+            },
+            { title: "Inverno Tecnologico: Duologia Digital", 
+                cover: "src/capa6.png", 
+                summary: "Dalbert Kirian destruiu seu futuro com sua invenção por arrogância; agora precisa consertar o erro para rever quem ama.", 
+                pages: 412, year: 2021, 
+                link: "https://www.amazon.com.br/gp/product/B09NWGS7TH"
+            }
         ] 
     },
 
@@ -92,7 +143,6 @@ const sagasDb = {
     ],
 
     books: [
-
         {
             title: "Estigma: O Símbolo das Bruxas",
             cover: "src/capa7.png",
@@ -193,7 +243,6 @@ const sagasDb = {
     ],
 
     books: [
-
         {
             title: "Manhunt: A Caçada Humana",
             cover: "src/capa20.png",
